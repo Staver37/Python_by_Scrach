@@ -1,0 +1,1 @@
+UPDATE "Product" SET quantity = quantity + 80  WHERE id = 1;
