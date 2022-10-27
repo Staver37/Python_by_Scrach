@@ -1,0 +1,89 @@
+## Object Oriented Programing
+* Is a Programing paradigm based on objects
+
+* An object is a structure that contains:
+    - data (proprieties)
+    - executable code (methods)
+
+*   MAIN FEATURES:
+    - Abstraction
+    - Encapsulation
+    - Inheritance
+    - Polimorthism
+
+                   action
+                     ^
+                     |
+                     v                        --------class--------
+       -----------object---------             |                    |
+       |                        |             | *structure:        |
+       |                        x<----------->|     proprietes     |
+       |          value         |             | * behaviour:       |
+       |                        |             |     metods         |
+       |                        |             |    & operattors    |
+       --------------------------             |                    |
+                                              ----------------------
+* Marea majoriatte a actiunilor legate de un obiect ( funct/ operatori ) 
+se concentreaza cel mai mult de pe valoarea obiectului info despre obiect 
+despre functile lui si ce trebuie sa faca, se afla in clasa obiectului.
+
+                                                    --------dict--------
+       -----------user_1--------------             |                   |
+       |                              |            | * operators:      |
+       | user_1 = {                   |            |      [],>,<,==... |
+       |     "nickname" : "firstUs3r",x<---------> | * methods:        |
+       |     " password": "123456"  , |            |  get(),clear(),.. | ex:--> def get(self): 
+       |     " online"  :  True    ,  |            |                   |             ...
+       |  }                           |            ---------------------             ...
+      --------------------------------                                              return....
+     Pentru a face codul mai compact  in interiorul clasei folosim 2 
+       underscore deci  ex:  __init__  <-setings si adaugam   self
+       self -> face legatura cu obiectul     
+       
+#  __init__ (self)
+  
+            -----object---- + <class User>
+            |             |
+            |             |------
+            |             |     |
+            ---------------     |
+                                |
+                                v
+              call   __init__(self)
+                           v
+                        custom  initialization  
+                           v
+                           |
+                           v
+                        return the object
+
+*** return - scoate valoarea  in afara functiei acolo unde a fost creata 
+ 
+ HW3: draw a sketch /diagram
+  
+                ---------user_1-------- < - class User()
+                |  __init__,          |       ^
+                |   self.nickname,    |       |
+                |   self.password,    |       | ->Checking if the object 
+                |   self.online,      |       |    is in User() class
+                -----------------------       | 
+                           ^                ----------------------------                      
+                           |                |if type(friend) != User:  |
+                           |                |     return               |-> Returned value
+                           |                ----------------------------
+Create  iterable variable  |                   friend_exist = False  -> giving var default value
+        which checking for |                 -----------------------------------------------------
+         existing nickname |--------->       |for existing_friend in self.friends:                |
+        in friends[] list  |                 |    if existing_friend.nickname == friend.nickname: |        
+If nickname exist in friends[]list, take val True ---->  friend_exist = True                      |
+           and             |  ------>        |      break                                         |
+                           |                 |----------------------------------------------------|
+If nickname dosen't exist  |  ------>        |if not friend_exist:                                |
+   add  new friend in friends[]list -----> |    self.friends.append(friend)                     |
+                           v                 -------------------------------------------------------
+                ---------user_No------- 
+                |  __init__,          |
+                |   self.nickname,    |
+                |   self.password,    |
+                |   self.online,      |
+                -----------------------

@@ -1,0 +1,28 @@
+HW3: draw a sketch /diagram
+ 
+                ---------user_1-------- < - class User()
+                |  __init__,          |       ^
+                |   self.nickname,    |       |
+                |   self.password,    |       | ->Checking if the object 
+                |   self.online,      |       |    is in User() class
+                -----------------------       | 
+                           ^                ----------------------------                      
+                           |                |if type(friend) != User:  |
+                           |                |     return               |-> Returned value
+                           |                ----------------------------
+Create  iterable variable  |                      friend_exist = False  -> giving var default value
+        which checking for |                 -----------------------------------------------------
+         existing nickname |--------->       |for existing_friend in self.friends:                |
+        in friends[] list  |                 |    if existing_friend.nickname == friend.nickname: |        
+If nickname exist in friends[]list, take val True ---->  friend_exist = True                      |
+           and             |  ------>        |      break                                         |
+                           |                 |----------------------------------------------------|
+If nickname dosen't exist  |  ------>        |if not friend_exist:                                |
+   add  new friend in friends[]list ----->   |    self.friends.append(friend)                     |
+                           v                 -------------------------------------------------------
+                ---------user_No------- 
+                |  __init__,          |
+                |   self.nickname,    |
+                |   self.password,    |
+                |   self.online,      |
+                -----------------------
